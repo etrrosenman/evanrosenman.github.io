@@ -1,428 +1,283 @@
 html, body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-table {
-  margin:20px;
-  padding:0px;
-  border-collapse: collapse;
+body {
+  background: #f7f8f3;
+  color: #202124;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.58;
 }
 
-tr, td, th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 10px; 
-  padding-right: 60px; 
-  text-align: left;
-  border-bottom: 2px solid #ddd;
+a {
+  color: #1f5c8f;
 }
 
-.center
-{
+a:hover {
+  color: #123b5f;
+}
+
+#topbar {
+  background: #eef2e8;
+  border-bottom: 1px solid #d8dfd0;
+}
+
+#sitename {
+  box-sizing: border-box;
+  max-width: 980px;
   margin: 0 auto;
-  width: 750px;
-}
-
-.mapcenter
-{
-  margin: 0 auto;
-
-}
-
-#topbar
-{
-  width: 100%; 
-  background-color: #AAAAAA;
-}
-
-#sitename
-{
-  display: inline; 
-  background-color: #AAAAAA;
-  min-width: 600px; 
-  font-size: 280%;
-  display: block;
-  font-weight: bold; 
+  padding: 28px 24px 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  padding-top: 20px;
-  font-style: italic; 
-  text-align: left; 
-  margin: 0 auto;
-  width: 750px; 
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 0;
 }
 
 #sitename a {
+  color: #1f2f46;
   text-decoration: none;
-  color: #000082;
-}
-
-.topcolor
-{
-  background-color: #CCEECC;
-  width: 100%; 
-}
-
-#description
-{
-  border-top-style:solid;
-  border-top:thick double #000000;
-  border-bottom-style:solid;
-  border-bottom:thick double #000000;
-  padding-top: 20px;
-  width: 100%;
-  position: relative;
-  top: 40px;
-  overflow: hidden; 
-}
-
-#photo
-{
-  border-style: solid;
-  border-width: 2px;
-  width: 160px;
-}
-
-#simplephoto
-{
-  padding-right: 15px;
-  float: left; 
-}
-
-ul.topnav {
-  min-width: 775px; 
-  list-style: none;
-  padding: 0 0px;	
-  margin: 0 auto;
-  font-size: 1.2em;
-  position: relative;  
-  float: right; 
-  right: 50%; 
-}
-
-.topnav li {
-  float: left;
-  margin: 0;	
-  padding: 0 60px 0 0;
-  position: relative; /*--Declare X and Y axis base for sub navigation--*/
-  left: 50%; 
-}
-
-
-li a{
-  padding: 10px;
-  color: #FFF;
-  display: block;
-  text-decoration: none;
-  font-weight: bold; 
-}å
-
-
-#projects li{
-  list-style: none;
-}
-
-#humor li{
-  list-style-type: disc;
-}
-
-.projectTitle {
-  font-size: 120%; 
-  font-weight:bold;
-  color: black; 
-  text-decoration: underline;
-}
-
-#projects .description{
-  padding: 10px; 
-}
-
-#projects a{
-  padding: 0px;
-  color: blue;
-  display: inline;
-  font-weight: bold; 
-}
-
-#humor a{
-  padding: 0px;
-  color: blue;
-  display: inline;
-  font-weight: bold; 
-}
-
-
-li.navitem ul.submenu {
-  list-style: none;
-  position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
-  left: 0; top: 100%;
-  background: #444444;
-  font-size: 80%;  
-  margin-top: 0px; padding: 0;
-  display: none;
-  float: left;
-  z-index: 5; 
-  width: 100%; 
-}
-
-li.writings{
-  width: 100%; 
-  left: 0%; 
-  padding-right: 0; 
-}
-
-li.connect {
-  width: 100%;
-  left: 0%;   
-  padding-right: 0; 
-}
-
-#aboutme {
-  width: 100.0%;
-  margin-right: 1.5%;  
-  position: relative; 
-  float: left; 
 }
 
 .widebar {
+  background: #263447;
+  border-bottom: 4px solid #c8a84b;
+}
+
+ul.topnav {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.topnav li {
+  margin: 0;
+  padding: 0;
+}
+
+li a,
+.topnav a {
+  display: block;
+  padding: 12px 14px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background: #172233;
+  color: #fff;
+}
+
+.center {
+  box-sizing: border-box;
+  max-width: 980px;
   width: 100%;
-  float: left; 
-  background-color: #444444;
-  position: relative; 
+  margin: 0 auto;
+  padding: 0 24px 52px;
+}
+
+#description {
+  box-sizing: border-box;
+  margin-top: 34px;
+  padding: 34px;
+  background: #fff;
+  border: 1px solid #e1e4dd;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(31, 47, 70, 0.08);
+  overflow: hidden;
+}
+
+#description > b:first-child,
+#description font[size="5"] {
+  color: #1f2f46;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  margin-top: 0;
+}
+
+#aboutme {
+  width: 100%;
+}
+
+#photo {
+  display: block;
+  width: 180px;
+  max-width: 38vw;
+  border: 1px solid #d6d8d2;
+  border-radius: 6px;
+}
+
+#simplephoto {
+  float: left;
+  margin: 0 24px 12px 0;
+}
+
+table {
+  width: 100%;
+  margin: 18px 0 32px;
+  border-collapse: collapse;
+  font-size: 0.96rem;
+}
+
+tr, td, th {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e1e4dd;
+  vertical-align: top;
+}
+
+th {
+  background: #f0f3ec;
+  color: #263447;
+  font-weight: 800;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+#projects li {
+  list-style: none;
+}
+
+#humor li {
+  list-style-type: disc;
+}
+
+.projectTitle,
+.articleTitle {
+  font-size: 120%;
+  font-weight: bold;
+  color: #202124;
+  text-decoration: underline;
+}
+
+#projects .description {
+  padding: 10px;
+}
+
+#projects a,
+#humor a,
+.title a,
+.inlineLink {
+  padding: 0;
+  color: #1f5c8f;
+  display: inline;
+  font-weight: bold;
 }
 
 .title {
-  font-style: italic; 
-  padding-bottom: 0; 
-  margin-bottom: 0; 
-}
-
-.title a {
-  color: blue; 
-  text-decoration: underline; 
-  padding: 0; 
-  margin: 0;
-  display: inline; 
+  font-style: italic;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .reflist {
-  list-style: none; 
-  padding-top: 0; 
-  margin-top: 0; 
+  list-style: none;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .acadcategory {
   font-size: 125%;
   font-weight: bold;
-  padding-left: 0px;  
+  padding-left: 0;
 }
 
 #acadtitle {
-  text-align: center; 
+  text-align: center;
   font-size: 200%;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
-#viewport{
-  display: block;
-  margin: 0 auto;
-  z-index: 5; 
-}
-
-#poemspace
-{
-    background-color: red;
-    height: 800px;
-    width: 500px;
-    position: absolute;
-    float: right; 
-    top:150px;
-    z-index: 5 
-}
-
-#poemnav
-{
-  float: right;
-}
-
-#spanner { 
-  width: 100%;
-  position: absolute;
-  top: 150px; 
-}
-
-#content a 
-{
-  text-align: right; 
-  float: left; 
-  font-weight: bold; 
-  margin-left: 20em; 
-}
-
-div#content {
-  position: absolute;   /* positions content on top of distance */
-  text-align: left;     /* horizontal centering hack for IE */
-  height: 32em;         /* required - desired height */
-  width: 26em;          /* required - desired width */
-  background: #FFFFC2;     /* cosmetic */
-  margin: 0 auto;       /* required */
-  clear: left;          /* required */
-  overflow-y: auto; 
-  padding: 20px; 
-}
- 
-#poem 
-{
-  padding-top: 20px; 
-}
-
-ul.poemoptions {
-  list-style: none;
-  position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
-  left: 100%; 
-  background: #444444;
-  font-size: 75%;  
-  padding: 0;
-  display: none;
-  float: left;
-  z-index: 10; 
-  border-color: black;
-  border-width: 2px; 
-  border-style: solid;
-} 
-
-.poemoptions li{
-  left: 0; 
-  width: 100%;    
-}
-
-
-ul.articleoptions {
-  list-style: none;
-  position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
-  left: 100%; 
-  top: 33.33%; 
-  background: #444444;
-  font-size: 75%;  
-  padding: 0;
-  display: none;
-  float: left;
-  z-index: 10; 
-  border-color: black;
-  border-width: 2px; 
-  border-style: solid;
-} 
-
-.articleoptions li{
-  left: 0; 
-  width: 100%;  
-}
-
-.articleTitle {
-  font-size: 120%; 
-  font-weight:bold;
-  color: black; 
+.retired-feature {
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 0 auto 36px;
+  padding: 18px 22px;
+  background: #fff7dc;
+  border: 1px solid #ead281;
+  border-radius: 8px;
 }
 
 #poemlist {
-  height: 500px;
-  width: 48.7%;
   float: left;
-  border-color: black;
-  border-width: 5px;
-  border-style: solid; 
-  margin-bottom: 20px; 
-  overflow: auto; 
+  width: 40%;
 }
 
-#poemdisplay {
-  height: 500px;
-  width: 48.6%;
-  float: left;
-  border-color: black;
-  border-width: 5px;
-  border-style: solid; 
-  margin-bottom: 20px; 
-  overflow: auto; 
-  background-color: #DDDDFF;
+.poemlink1bg,
+.poemlink0bg {
+  padding: 8px 10px;
 }
 
 .poemlink1bg {
-  padding-top: 10px; 
-  padding-bottom: 10px; 
-  padding-left: 15px; 
-  background-color: #CCCCCC;
+  background-color: #f1f1f1;
 }
 
 .poemlink0bg {
-  padding-top: 10px; 
-  padding-bottom: 10px; 
-  padding-left: 15px; 
-  background-color: #999999;
+  background-color: #e1e1e1;
 }
 
-.poemlink1bg a, .poemlink0bg a{
-  color: blue;
-  text-decoration: none; 
-  font-weight: bold; 
-  font-size: 110%; 
+#poemdisplay {
+  float: right;
+  background-color: #f3f5ef;
+  width: 57%;
+  min-height: 24em;
 }
 
 #poemtext {
-  margin: 20px; 
+  margin: 12px;
 }
 
-#updates h1, #readingrecs h1{
-  text-align: center; 
-  font-size: 115%; 
-  margin-top: 3%; 
+.experience h1 {
+  color: #1f2f46;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#updates p, #readingrecs p{
-  padding-left: 10px;
-  padding-right: 10px; 
-}
+@media (max-width: 680px) {
+  #sitename {
+    font-size: 32px;
+    padding: 22px 18px 16px;
+  }
 
-#updates{
-  height: 70%;
-  border-bottom-width: 2px;
-  border-bottom-color: black;
-  border-bottom-style: solid; 
-}
+  ul.topnav {
+    padding: 0 10px;
+  }
 
-#readingrecs{
-  height: 42%;
-  border-bottom-width: 2px;
-  border-bottom-color: black;
-  border-bottom-style: solid; 
-}
+  .topnav a {
+    padding: 10px;
+  }
 
-#sidepanel{
-  width: 30%;
-  height: 510px; 
-  float: right;
-  text-align: left; 
-  background-color: #AAAAFF;
-  position: relative; 
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
+  .center {
+    padding: 0 14px 36px;
+  }
 
-.domain {
-  color: black; 
-  font-weight: bold; 
-  text-decoration: none; 
-}
+  #description {
+    margin-top: 22px;
+    padding: 22px;
+  }
 
-#testviewport {
-  background-color: blue; 
-}
+  #simplephoto {
+    float: none;
+    margin-right: 0;
+  }
 
-.inlineLink {
-        text-decoration: none; 
-        color: blue;
-  margin: 0 0 0 0; 
-  padding: 0 0 0 0; 
-        font-weight: normal; 
-        display:inline;
+  #photo {
+    width: 150px;
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+
+  tr, td, th {
+    padding: 10px 8px;
+  }
 }
